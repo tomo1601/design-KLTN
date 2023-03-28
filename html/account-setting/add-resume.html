@@ -47,6 +47,7 @@
             background-color: white;
             box-shadow: 1px 1px 3px gray;
             border-radius: 10px;
+            width: 80%;
         }
 
 
@@ -107,12 +108,25 @@
             color: white;
         }
 
+        .free-space .resume .text-area-group {
+            margin-bottom: 1.5em;
+        }
+
+        .free-space .resume .text-area-group textarea {
+            box-sizing: border-box;
+            width: 100%;
+            height: 150px;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
         @media screen and (max-width: 600px) {
-            .free-space{
+            .free-space {
                 padding: 0 25px 25px 25px;
                 font-size: 16px;
 
             }
+
             .free-space .resume .double-select {
                 flex-direction: column;
                 margin-bottom: 0;
@@ -184,12 +198,24 @@
                     </select>
                 </div>
             </div>
+            <small>Provide us some details of your information to make the correct prediction job for you.</small>
+            <div class="text-area-group">
+                <div class="label">Your work history</div>
+                <textarea></textarea>
+            </div>
+
+            <div class="text-area-group">
+                <div class="label">Your skills</div>
+                <textarea></textarea>
+            </div>
+
             <div class="label">Resume pdf</div>
             <div class="button">
                 <i class="fa fa-upload" aria-hidden="true"></i>
                 Upload
             </div>
             <small>Format for PDF only.</small>
+
             <div class="group-buttons">
                 <div class="button">
                     <i class="fa fa-floppy-o" aria-hidden="true"></i>
