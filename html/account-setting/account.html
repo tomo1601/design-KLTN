@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .header {
+            height: 80px;
+            background-color: white;
+        }
+
+        .content-wrapper {
+            padding: 30px 0;
+        }
+
+        .content-wrapper .content {
+            width: 100%;
+            display: flex;
+            column-gap: 20px;
+        }
+
+        .content .navbar-vertical {
+            width: 300px;
+            background-color: white;
+            box-sizing: border-box;
+            padding: 20px 0;
+            height: max-content;
+            /* font-size: 20px; */
+        }
+
+        .content .navbar-vertical .label {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            padding: 0 0 0 10px;
+            font-size: 1em;
+        }
+
+        .content .navbar-vertical .nav-item {
+            margin: 0;
+            padding: 10px 0;
+            list-style-type: none;
+            transition: 1s ease;
+        }
+
+        .content .navbar-vertical .label:hover+.nav-item li {
+            visibility: visible;
+            /* opacity: 1; */
+        }
+
+        .content .navbar-vertical .nav-item li {
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+            /* visibility: hidden;
+            opacity: 0; */
+            transition: 0.3s ease-in;
+        }
+
+        .content .navbar-vertical .nav-item li:hover {
+            cursor: pointer;
+            background-color: rgba(59, 130, 246, .5);
+        }
+
+        .content .navbar-vertical .nav-icon {
+            width: 1.4em;
+        }
+
+        .content .free-space {
+            min-height: 730px;
+            width: 80%;
+            margin-right: 20px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            padding: 10px 50px 50px 50px;
+            font-size: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: antiquewhite;
+            align-items: center;
+
+
+        }
+
+        .free-space h1 {
+            text-align: center;
+            color: #103785;
+            font-size: 2em;
+        }
+
+        .free-space input,
+        .free-space button,
+        .free-space select {
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .free-space .label {
+            font-weight: bold;
+        }
+
+        div.button {
+            display: flex;
+            align-items: center;
+            background: #f5f5f5;
+            padding: 15px;
+            gap: 10px;
+            font-weight: bold;
+            box-shadow: 1px 1px 3px gray;
+            width: max-content;
+            min-width: 100px;
+            justify-content: center;
+        }
+
+        div.button:hover {
+            cursor: pointer;
+            background-color: coral;
+            color: white;
+        }
+
+        @media screen and (max-width: 600px) {
+            .content-wrapper {
+                font-size: 16px;
+            }
+
+            .content-wrapper .free-space {
+                padding: 0 25px 25px 25px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header"></div>
+    <div class="content-wrapper">
+        <div class="content">
+            <div class="navbar-vertical">
+                <div class="label"><img src="../icons/v-shape-black-icon.png" class="nav-icon"> Account
+                    management</div>
+                <ul class="nav-item disabled">
+                    <li>
+                        <img src="../icons/account-icon.png" alt="" class="nav-icon">
+                        <a class="nav-text">Your account</a>
+                    </li>
+                    <li>
+                        <img src="../icons/check-icon.png" alt="" class="nav-icon">
+                        <a class="nav-text">Verify email</a>
+                    </li>
+                    <li>
+                        <img src="../icons/check-icon.png" alt="" class="nav-icon">
+                        <a class="nav-text">Change password</a>
+                    </li>
+                </ul>
+
+                <div class="label"><img src="../icons/v-shape-black-icon.png" class="nav-icon"> Records
+                    management</div>
+                <ul class="nav-item">
+                    <li>
+                        <img src="../icons/cv-icon.png" alt="" class="nav-icon">
+                        <a class="nav-text">Your profile</a>
+                    </li>
+
+                </ul>
+                <div class="label"><img src="../icons/v-shape-black-icon.png" class="nav-icon"> Job
+                    management</div>
+                <ul class="nav-item">
+                    <li>
+                        <img src="../icons/apply-icon.png" alt="" class="nav-icon">
+                        <a class="nav-text">Job applied</a>
+                    </li>
+                    <li>
+                        <img src="../icons/heart-icon.png" alt="" class="nav-icon">
+                        <a class="nav-text">Saved jobs</a>
+                    </li>
+
+                </ul>
+                <div class="label"><img src="../icons/v-shape-black-icon.png" alt="" class="nav-icon"> Your employers
+                </div>
+                <ul class="nav-item">
+                    <li>
+                        <img src="../icons/search-employee-icon.png" alt="" class="nav-icon">
+                        <a class="nav-text">Profile viewers</a>
+                    </li>
+                    <li>
+                        <img src="../icons/followed-icon.png" alt="" class="nav-icon">
+                        <a class="nav-text">Followed</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="free-space">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

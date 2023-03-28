@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .free-space {
+            min-height: 730px;
+            width: 80%;
+            margin-right: 20px;
+            box-sizing: border-box;
+            padding: 0 50px 50px 50px;
+            font-size: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .free-space h1{
+            text-align: center;
+            color: #103785;
+        }
+
+        .free-space input,
+        .free-space button,
+        .free-space select {
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .free-space .resume {
+            padding: 25px;
+            background-color: white;
+            box-shadow: 1px 1px 3px gray;
+            border-radius: 10px;
+        }
+
+
+        .free-space .resume .label {
+            font-weight: bold;
+        }
+
+
+        .free-space .resume .group-buttons {
+            display: flex;
+            justify-content: end;
+            gap: 20px;
+        }
+
+        .free-space .resume .select {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .free-space .resume .select select {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .free-space .resume .input12 {
+            margin-bottom: 20px;
+
+        }
+
+        .free-space .resume .input12 input {
+            width: 100%;
+
+        }
+
+        .free-space .resume .double-select {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+        }
+
+        .free-space .resume .double-select .select {
+            width: 45%;
+        }
+
+        .free-space .resume .double-select .select select {
+            width: 100%;
+            font-weight: bold;
+        }
+
+        /*May be global*/
+        div.button {
+            display: flex;
+            align-items: center;
+            background: #f5f5f5;
+            padding: 15px;
+            gap: 10px;
+            font-weight: bold;
+            box-shadow: 1px 1px 3px gray;
+            width: max-content;
+            min-width: 100px;
+        }
+
+        div.button:hover {
+            cursor: pointer;
+            background-color: coral;
+            color: white;
+        }
+
+        @media screen and (max-width: 600px) {
+            .free-space{
+                padding: 0 25px 25px 25px;
+                font-size: 16px;
+
+            }
+            .free-space .resume .double-select {
+                flex-direction: column;
+                margin-bottom: 0;
+            }
+
+            .free-space .resume .double-select .select {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .free-space .resume .group-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="free-space">
+        <div class="resume">
+            <h1>Update Resume</h1>
+
+            <div class="select">
+                <div class="label">Resume</div>
+                <select name="" id="">
+                    <option value="">Resume 1</option>
+                    <option value="">Resume 2</option>
+                    <option value="">Resume 3</option>
+                </select>
+            </div>
+            <div class="input12">
+                <div class="label">Name</div>
+                <input type="text">
+            </div>
+            <div class="double-select">
+                <div class="select">
+                    <div class="label">Public</div>
+                    <select name="" id="">
+                        <option value="true">True</option>
+                        <option value="false">False</option>
+                    </select>
+                </div>
+                <div class="select">
+                    <div class="label">Experience</div>
+                    <select name="" id="">
+                        <option value="NONE">No Experience</option>
+                        <option value="UNDER_ONE_YEAR">Under 1 Year</option>
+                        <option value="ONE_YEAR">1 Year</option>
+                        <option value="TWO_YEAR">2 Years</option>
+                        <option value="THREE_YEAR">3 Years</option>
+                        <option value="FOUR_YEAR">4 Years</option>
+                        <option value="FIVE_YEAR">5 Years</option>
+                        <option value="ABOVE_FIVE_YEAR">5+ Years</option>
+                    </select>
+                </div>
+            </div>
+            <div class="double-select">
+                <div class="select">
+                    <div class="label">Expected Position</div>
+                    <select name="" id="">
+                        <option value="Staff">Staff</option>
+                        <option value="Leader">Leader</option>
+                        <option value="Manager">Manager</option>
+                        <option value="Deputy">Deputy</option>
+                        <option value="Vice_President">Vice President</option>
+                        <option value="Interns">Interns</option>
+                        <option value="Branch_Manager">Branch Manager</option>
+                    </select>
+                </div>
+                <div class="select">
+                    <div class="label">Working method</div>
+                    <select name="" id="">
+                        <option value="INTERN">Intern</option>
+                        <option value="FULL_TIME">Full-time</option>
+                        <option value="PART_TIME">Part-time</option>
+                    </select>
+                </div>
+            </div>
+            <div class="group-buttons">
+                <div class="button">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                    Update
+                </div>
+                <div class="button">
+                    <i class="fa fa-ban" aria-hidden="true"></i>
+                    Cancel
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
