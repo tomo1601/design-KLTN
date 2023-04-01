@@ -6,319 +6,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Information</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./account-setting.css">
 
 </head>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
 
-    }
-
-    .free-space {
-        min-height: 730px;
-        width: 80%;
-        margin-right: 20px;
-        box-sizing: border-box;
-        padding: 0 50px 50px 50px;
-        font-size: 20px;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    .cover-and-avatar {
-        background-color: white;
-        padding: 25px;
-        border-radius: 10px;
-        box-shadow: 1px 1px 3px gray;
-        margin-bottom: 1.5em;
-    }
-
-    .free-space .cover-and-avatar h1 {
-        text-align: center;
-        color: #103785;
-        margin-top: 0px;
-    }
-
-    .cover-and-avatar .cover {
-        background-image: url('http://2.bp.blogspot.com/-mIBnH7Yu8t8/T44dEX94J2I/AAAAAAAAEXE/Vzn-4Obtjis/s1600/Love+Facebook+Covers.png');
-        background-size: cover;
-        background-position: center;
-        height: 200px;
-        position: relative;
-        margin-bottom: 1.5em;
-        border-radius: 10px;
-
-    }
-
-    .cover-and-avatar .cover .button {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-    }
-
-    .cover-and-avatar .avatar-wrapper {
-        padding: 20px 10px;
-        display: flex;
-        gap: 20px;
-        border-radius: 10px;
-    }
-
-    .cover-and-avatar .avatar-wrapper .avatar {
-        width: 20%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cover-and-avatar .avatar-wrapper .avatar h3 {
-        text-align: center;
-        margin: 0;
-    }
-
-    .cover-and-avatar .avatar-wrapper .avatar img {
-        width: 100%;
-    }
-
-    .cover-and-avatar .avatar-wrapper .uploads {
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-    }
-
-    .cover-and-avatar .avatar-wrapper .uploads .button {
-        margin-bottom: 10px;
-    }
-
-
-    .free-space .infor {
-        padding: 25px;
-        background-color: white;
-        box-shadow: 1px 1px 3px gray;
-        border-radius: 10px;
-    }
-
-    .free-space .infor .input-groups {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .free-space .infor .input-groups .singleInput {
-        width: 45%;
-        margin-bottom: 1.5em;
-
-    }
-
-    .free-space .infor .label {
-        font-weight: bold;
-    }
-
-    .free-space .infor .input-groups .singleInput input {
-        width: 100%;
-        padding: 15px;
-        border-radius: 5px;
-        box-sizing: border-box;
-    }
-
-    .free-space .infor .description-text {
-        margin-bottom: 1.5em;
-    }
-
-    .free-space .infor .description-text textarea {
-        width: 100%;
-        height: 150px;
-        border-radius: 5px;
-        padding: 10px;
-
-    }
-
-    .free-space .infor .loc-and-industry {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 1.5em;
-    }
-
-    .free-space .infor .loc-and-industry .item {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        width: 300px;
-    }
-
-    .free-space .infor .loc-and-industry .item-left {
-        justify-content: start;
-
-    }
-
-    .free-space .infor .loc-and-industry .item-right {
-        justify-content: end;
-
-    }
-
-    .free-space .infor .loc-and-industry .item select {
-        padding: 15px;
-        border-radius: 5px;
-        min-width: 150px;
-        font-size: 1em;
-    }
-
-    .free-space .infor .group-buttons {
-        display: flex;
-        justify-content: end;
-        gap: 20px;
-    }
-
-    /*May be global*/
-    div.button {
-        display: flex;
-        align-items: center;
-        padding: 15px;
-        background: #f5f5f5;
-        gap: 10px;
-        font-weight: bold;
-        box-shadow: 1px 1px 3px gray;
-        width: max-content;
-        min-width: 100px;
-    }
-
-    div.button:hover {
-        cursor: pointer;
-        background-color: coral;
-        color: white;
-    }
-
-    @media screen and (max-width: 800px) {
-        .free-space {
-            font-size: 16px;
-            padding: 0 25px 25px 25px;
-        }
-
-
-        .free-space .infor,
-        .free-space .cover-and-avatar {
-            padding: 10px;
-        }
-
-        .free-space .cover-and-avatar .cover {
-            height: 150px;
-        }
-
-        .free-space .cover-and-avatar .avatar-wrapper {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .free-space .cover-and-avatar .avatar-wrapper .avatar {
-            width: 40%;
-            gap: 10px;
-        }
-
-        .free-space .cover-and-avatar .avatar-wrapper .uploads {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .free-space .cover-and-avatar .avatar-wrapper .uploads .description {
-            display: none;
-        }
-
-        .free-space .infor .input-groups {
-            flex-direction: column;
-        }
-
-        .free-space .infor .input-groups .singleInput {
-            width: 100%;
-        }
-
-        .free-space .infor .loc-and-industry {
-            flex-direction: column;
-        }
-
-        .free-space .infor .loc-and-industry .item {
-            min-width: unset;
-            width: unset;
-            gap: 0px;
-            justify-content: start;
-            align-items: start;
-            flex-direction: column;
-            margin-bottom: 10px;
-
-        }
-
-        .free-space .infor .loc-and-industry .item .label {
-            order: -1;
-        }
-
-        .free-space .infor .loc-and-industry .item select {
-            width: 100%;
-        }
-
-        .free-space .infor .group-buttons {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-</style>
 
 <body>
-    <div class="free-space">
+        <div class="free-space" id="free-space">
+        <h1>Profile</h1>
         <div class="cover-and-avatar">
-            <h1>Profile</h1>
             <div class="cover">
-                <div class="button"><i class="fa fa-upload" aria-hidden="true"></i>
-                    Upload</div>
+                <div class="button">
+                    <img src="../../picture-banner/baseline_file_upload_white_24dp.png" alt="">
+                    Upload image
+                </div>
             </div>
             <div class="avatar-wrapper">
                 <div class="avatar">
                     <h3>Avatar</h3>
-                    <img src="https://tse1.mm.bing.net/th?id=OIP.STdrVT87X1tnQJWSdE5VeQHaHa&pid=Api&P=0" alt="">
+                    <img src="../../picture-banner/logo.png" alt="">
                 </div>
                 <div class="uploads">
-                    <div class="button"><i class="fa fa-upload" aria-hidden="true"></i>
-                        Upload image</div>
+                    <div class="button">
+                        <img src="../../picture-banner/baseline_file_upload_white_24dp.png" alt="">
+                        Upload image
+                    </div>
                     <div class="description"> Format for .JPG, .JPEG, .PNG and size is not bigger than 300 KB.</div>
                 </div>
             </div>
         </div>
-        <div class="infor">
-            <div class="input-groups">
-                <div class="singleInput">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="input-wrapper">
                     <div class="label">Email</div>
                     <input type="email">
 
                 </div>
-                <div class="singleInput">
+                <div class="input-wrapper">
                     <div class="label">Name</div>
                     <input type="text">
 
                 </div>
             </div>
-            <div class="input-groups">
-                <div class="singleInput">
+            <div class="row">
+                <div class="input-wrapper">
                     <div class="label">Phone</div>
                     <input type="number">
 
                 </div>
-                <div class="singleInput">
+                <div class="input-wrapper">
                     <div class="label">Address</div>
                     <input type="text">
 
                 </div>
             </div>
-            <div class="description-text">
+            <div class="text-area-group">
                 <div class="label">Description</div>
                 <textarea></textarea>
             </div>
-            <div class="loc-and-industry">
-                <div class="item item-left">
+            <div class="double-select">
+                <div class="select">
                     <div class="label">Location</div>
                     <select name="" id="">
                         <option value="">Tp Hồ Chí Minh</option>
@@ -326,23 +73,22 @@
                         <option value="">Hà Nội</option>
                     </select>
                 </div>
-                <div class="item item-right">
+                <div class="select">
+                    <div class="label">Industry</div>
                     <select name="" id="">
                         <option value="">Finance</option>
                         <option value="">Banking</option>
                         <option value="">Social Media</option>
                     </select>
-                    <div class="label">Industry</div>
-
                 </div>
             </div>
             <div class="group-buttons">
                 <div class="button">
-                    <i class="fa fa-floppy-o" aria-hidden="true"></i>
-                    Update
+                    <img src="../../picture-banner/baseline_save_white_24dp.png" alt="">
+                    Confirm
                 </div>
-                <div class="button">
-                    <i class="fa fa-ban" aria-hidden="true"></i>
+                <div class="button cancel">
+                    <img src="../../picture-banner/clear.png" alt="">
                     Cancel
                 </div>
             </div>

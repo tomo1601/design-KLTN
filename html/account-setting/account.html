@@ -5,143 +5,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./account-setting.css">
+
     <title>Account</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
         .header {
             height: 80px;
             background-color: white;
+            width: 100%;
         }
 
         .content-wrapper {
-            padding: 30px 0;
-        }
-
-        .content-wrapper .content {
+            padding: 1.5em 0;
             width: 100%;
             display: flex;
             column-gap: 20px;
         }
 
-        .content .navbar-vertical {
-            width: 300px;
+
+        .navbar-vertical {
+            width: 20%;
+            min-width: 200px;
             background-color: white;
             box-sizing: border-box;
-            padding: 20px 0;
+            padding: 1em 0;
             height: max-content;
-            /* font-size: 20px; */
         }
 
-        .content .navbar-vertical .label {
+        .navbar-vertical .label {
             font-weight: bold;
             display: flex;
             align-items: center;
             column-gap: 10px;
-            padding: 0 0 0 10px;
+            padding: 0 0 0 0.5em;
             font-size: 1em;
         }
 
-        .content .navbar-vertical .nav-item {
+        .navbar-vertical .nav-item {
             margin: 0;
-            padding: 10px 0;
+            padding: 0.5em 0;
             list-style-type: none;
             transition: 1s ease;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+
+            visibility: hidden;
+
         }
 
-        .content .navbar-vertical .label:hover+.nav-item li {
+        .navbar-vertical .actived+.nav-item {
             visibility: visible;
-            /* opacity: 1; */
+            opacity: 1;
+            height: auto;
         }
 
-        .content .navbar-vertical .nav-item li {
-            padding: 10px 20px;
+        .navbar-vertical .nav-item li {
+            padding: 0.5em 1em;
             display: flex;
             align-items: center;
             column-gap: 5px;
-            /* visibility: hidden;
-            opacity: 0; */
             transition: 0.3s ease-in;
         }
 
-        .content .navbar-vertical .nav-item li:hover {
+        .navbar-vertical .nav-item li:hover {
             cursor: pointer;
             background-color: rgba(59, 130, 246, .5);
         }
 
-        .content .navbar-vertical .nav-icon {
+        .navbar-vertical .nav-icon {
             width: 1.4em;
-        }
-
-        .content .free-space {
-            min-height: 730px;
-            width: 80%;
-            margin-right: 20px;
-            border-radius: 5px;
-            box-sizing: border-box;
-            padding: 10px 50px 50px 50px;
-            font-size: 20px;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background-color: antiquewhite;
-            align-items: center;
-
-
-        }
-
-        .free-space h1 {
-            text-align: center;
-            color: #103785;
-            font-size: 2em;
-        }
-
-        .free-space input,
-        .free-space button,
-        .free-space select {
-            padding: 15px;
-            box-sizing: border-box;
-        }
-
-        .free-space .label {
-            font-weight: bold;
-        }
-
-        div.button {
-            display: flex;
-            align-items: center;
-            background: #f5f5f5;
-            padding: 15px;
-            gap: 10px;
-            font-weight: bold;
-            box-shadow: 1px 1px 3px gray;
-            width: max-content;
-            min-width: 100px;
-            justify-content: center;
-        }
-
-        div.button:hover {
-            cursor: pointer;
-            background-color: coral;
-            color: white;
-        }
-
-        @media screen and (max-width: 600px) {
-            .content-wrapper {
-                font-size: 16px;
-            }
-
-            .content-wrapper .free-space {
-                padding: 0 25px 25px 25px;
-            }
-
-
         }
     </style>
 </head>
@@ -149,66 +84,112 @@
 <body>
     <div class="header"></div>
     <div class="content-wrapper">
-        <div class="content">
-            <div class="navbar-vertical">
-                <div class="label"><img src="../icons/v-shape-black-icon.png" class="nav-icon"> Account
-                    management</div>
-                <ul class="nav-item disabled">
-                    <li>
-                        <img src="../icons/account-icon.png" alt="" class="nav-icon">
-                        <a class="nav-text">Your account</a>
-                    </li>
-                    <li>
-                        <img src="../icons/check-icon.png" alt="" class="nav-icon">
-                        <a class="nav-text">Verify email</a>
-                    </li>
-                    <li>
-                        <img src="../icons/check-icon.png" alt="" class="nav-icon">
-                        <a class="nav-text">Change password</a>
-                    </li>
-                </ul>
+        <div class="navbar-vertical">
+            <div class="label" onclick="activeClick(event)"><img src="../../icons/v-shape-black-icon.png"
+                    class="nav-icon"> Account
+                management</div>
+            <ul class="nav-item disabled">
+                <li onclick="getData('./personal-info.html')">
+                    <img src="../../icons/account-icon.png" alt="" class="nav-icon">
+                    <a class="nav-text">Your account</a>
+                </li>
+                <li onclick="getData('./achievement.html')">
+                    <img src="../../icons/certificate-blue-icon.png" alt="" class="nav-icon">
+                    <a class="nav-text">
+                        Achievement</a>
+                </li>
 
-                <div class="label"><img src="../icons/v-shape-black-icon.png" class="nav-icon"> Records
-                    management</div>
-                <ul class="nav-item">
-                    <li>
-                        <img src="../icons/cv-icon.png" alt="" class="nav-icon">
-                        <a class="nav-text">Your profile</a>
-                    </li>
+                <li onclick="getData('./change-password.html')">
+                    <img src="../../icons/change-password-icon.png" alt="" class="nav-icon">
+                    <a class="nav-text">Change
+                        password</a>
+                </li>
+                <li onclick="getData('./Verify-email.html')">
+                    <img src="../../icons/check-icon.png" alt="" class="nav-icon">
+                    <a class="nav-text">Verify email</a>
+                </li>
+            </ul>
 
-                </ul>
-                <div class="label"><img src="../icons/v-shape-black-icon.png" class="nav-icon"> Job
-                    management</div>
-                <ul class="nav-item">
-                    <li>
-                        <img src="../icons/apply-icon.png" alt="" class="nav-icon">
-                        <a class="nav-text">Job applied</a>
-                    </li>
-                    <li>
-                        <img src="../icons/heart-icon.png" alt="" class="nav-icon">
-                        <a class="nav-text">Saved jobs</a>
-                    </li>
+            <div class="label" onclick="activeClick(event)"><img src="../../icons/v-shape-black-icon.png" class="nav-icon"> Records
+                management</div>
+            <ul class="nav-item">
+                <li onclick="getData('./add-resume.html')">
+                    <img src="../../icons/add-post-icon.png" alt="" class="nav-icon">
+                    <a class="nav-text">Add new resume</a>
+                </li>
+                <li onclick="getData('./update-resume.html')">
+                    <img src="../../icons/edit-icon.png" alt="" class="nav-icon">
+                    <a class="nav-text">Update your resume</a>
+                </li>
+                <li onclick="getData('./predict-job.html')">
+                    <img src="../../icons/cv-icon.png" alt="" class="nav-icon">
+                    <a class="nav-text">Predict job</a>
+                </li>
 
-                </ul>
-                <div class="label"><img src="../icons/v-shape-black-icon.png" alt="" class="nav-icon"> Your employers
-                </div>
-                <ul class="nav-item">
-                    <li>
-                        <img src="../icons/search-employee-icon.png" alt="" class="nav-icon">
-                        <a class="nav-text">Profile viewers</a>
-                    </li>
-                    <li>
-                        <img src="../icons/followed-icon.png" alt="" class="nav-icon">
-                        <a class="nav-text">Followed</a>
-                    </li>
+            </ul>
+            <div class="label" onclick="activeClick(event)"><img src="../../icons/v-shape-black-icon.png" class="nav-icon"> Job
+                management</div>
+            <ul class="nav-item">
+                <li onclick="getData('./post-submitted.html')">
+                    <img src="../../icons/apply-icon.png" alt="" class="nav-icon">
+                    <a class="nav-text">Job applied</a>
+                </li>
+                <li onclick="getData('./post-followed.html')">
+                    <img src="../../icons/heart-icon.png" alt="" class="nav-icon">
+                    <a class="nav-text">Saved jobs</a>
+                </li>
 
-                </ul>
+            </ul>
+            <div class="label" onclick="activeClick(event)"><img src="../../icons/v-shape-black-icon.png" alt="" class="nav-icon"> Your employers
             </div>
-            <div class="free-space">
+            <ul class="nav-item">
+                <li onclick="getData('./resume-viewer.html')">
+                    <img src="../../icons/search-employee-icon.png" alt="" class="nav-icon">
+                    <a class="nav-text">Profile viewers</a>
+                </li>
+                <li onclick="getData('./recruiter-followed.html')">
+                    <img src="../../icons/followed-icon.png" alt="" class="nav-icon">
+                    <a class="nav-text">Followed</a>
+                </li>
 
-            </div>
+            </ul>
+        </div>
+        <div class="free-space" id="free-space">
+
         </div>
     </div>
+    <script>
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+        async function getData(str) {
+            // Load the HTML file
+
+            const cur = document.getElementById('free-space')
+            cur.innerHTML = `<div class="lds-dual-ring"></div>`
+            await sleep(500)
+            fetch(str)
+                .then(response => response.text())
+                .then(html => {
+                    // Parse the HTML string into a document object
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    // Find the target element
+                    const targetEl = doc.getElementById('free-space')
+                    cur.innerHTML = targetEl.innerHTML
+
+                })
+                .catch(error => console.error(error));
+        }
+
+        function activeClick(e) {
+            if (!e.target.classList.contains('actived'))
+                e.target.classList.add('actived')
+            else {
+                e.target.classList.remove('actived')
+            }
+        }
+    </script>
 </body>
 
 </html>
