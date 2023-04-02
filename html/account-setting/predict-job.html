@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title> Predict Job</title>
+    <style>
+        .free-space {
+            min-height: 730px;
+            width: 80%;
+            margin-right: 20px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            padding: 10px 50px 50px 50px;
+            font-size: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: antiquewhite;
+            align-items: center;
+
+        }
+
+        .free-space h1 {
+            text-align: center;
+            color: #103785;
+            font-size: 2em;
+        }
+
+        .free-space .predict-job-wrapper {
+            width: 80%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .free-space .predict-job-wrapper .post {
+            display: flex;
+            border-radius: 5px;
+            border: 1px solid black;
+            padding: 10px;
+            box-sizing: border-box;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .free-space .predict-job-wrapper .post .avatar {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .free-space .predict-job-wrapper .post .avatar img {
+            width: 100%;
+        }
+
+        .free-space .predict-job-wrapper .post .post-info {
+            width: 80%;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+
+        .free-space .predict-job-wrapper .post .post-info .post-title {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .free-space .predict-job-wrapper .post .post-info .post-title .title {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 1em;
+        }
+
+        .free-space .predict-job-wrapper .post .post-info .post-description {
+            margin-bottom: 1em;
+            text-align: justify;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            /* number of lines to show */
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .row-flex {
+            display: flex;
+        }
+
+        .free-space .predict-job-wrapper p {
+            margin: 0;
+        }
+
+        .row-flex .item {
+            width: 33%;
+            display: flex;
+            padding: 5px;
+            gap: 10px;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        .row-flex .item:hover {
+            cursor: pointer;
+        }
+
+        .paging {
+            display: flex;
+            justify-content: center;
+        }
+
+        .paging .pagging-wrapper {
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 1px 1px 2px grey;
+
+
+        }
+
+        .paging .pagging-wrapper .page-item {
+            border: 1px solid black;
+            padding: 5px 10px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 2px grey;
+        }
+
+        .paging .pagging-wrapper .page-item:hover {
+            cursor: pointer;
+            color: white;
+            background-color: skyblue;
+        }
+
+        .free-space .label {
+            font-weight: bold;
+        }
+
+        .free-space .predict-job-wrapper .select .row-flex {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .free-space .predict-job-wrapper .select select {
+            width: 70%;
+            border-radius: 5px;
+        }
+
+        .free-space .predict-job-wrapper .select button {
+            border-radius: 5px;
+            width: 20%;
+            padding: 10px 20px;
+            color: #103785;
+            border: unset;
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        .free-space .predict-job-wrapper .select button:hover {
+            cursor: pointer
+        }
+
+        .predict-result {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #F2F7FF;
+            width: 100%;
+            padding: 20px;
+            gap: 20px;
+            box-sizing: border-box;
+        }
+        
+        .predict-result .single-result {
+            width: 25%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            padding: 7px;
+            border-radius: 5px;
+        }
+
+        .predict-result .single-result .pipe {
+            width: 85%;
+            background-color: #D9D9D9;
+            height: 100%;
+            border-radius: 5px;
+
+        }
+        .predict-result .single-result .pipe .value{
+            width: 66%;
+            height: 100%;
+            background-color: #0A66C2;
+            border-radius: 5px;
+
+        }
+        .predict-result .value-text{
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="free-space">
+
+        <div class="predict-job-wrapper">
+            <h1> Predict Job</h1>
+            <div class="select">
+                <div class="label">Resume</div>
+                <div class="row-flex">
+                    <select name="" id="">
+                        <option>Resume 1</option>
+                        <option>Resume 2</option>
+                        <option>Resume 3</option>
+                    </select>
+                    <button>Predict</button>
+                </div>
+            </div>
+            <div class="predict-result">
+                <div class="single-result">
+                    <div class="pipe">
+                        <div class="value"></div>
+                    </div>
+                    <div class="value-text">66%</div>
+                </div>
+                <div class="single-result">
+                    <div class="pipe">
+                        <div class="value"></div>
+                    </div>
+                    <div class="value-text">66%</div>
+                </div>
+                <div class="single-result">
+                    <div class="pipe">
+                        <div class="value"></div>
+                    </div>
+                    <div class="value-text">66%</div>
+                </div>
+                <div class="single-result">
+                    <div class="pipe">
+                        <div class="value"></div>
+                    </div>
+                    <div class="value-text">66%</div>
+                </div>
+                <div class="single-result">
+                    <div class="pipe">
+                        <div class="value"></div>
+                    </div>
+                    <div class="value-text">66%</div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="avatar">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.STdrVT87X1tnQJWSdE5VeQHaHa&pid=Api&P=0" alt="">
+                </div>
+                <div class="post-info">
+                    <div class="post-title">
+                        <p class="title">Tuyển nhân viên văn phòng</p>
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="post-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos cupiditate dolores tenetur,
+                        voluptatem necessitatibus sunt repellat reprehenderit eum, error quia ducimus. Repellendus
+                        quos
+                        ea, enim assumenda voluptate in cupiditate iste.
+                    </div>
+                    <div class="row-flex">
+                        <div class="item">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            <p>binhhv0712@gmail.com</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <p>Ho Chi Minh</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i>
+                            <p>Banking</p>
+                        </div>
+                    </div>
+                    <div class="row-flex">
+                        <div class="item">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                            <p>Full time</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <p>Manager</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa fa-money" aria-hidden="true"></i>
+                            <p>10000 $</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="avatar">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.STdrVT87X1tnQJWSdE5VeQHaHa&pid=Api&P=0" alt="">
+                </div>
+                <div class="post-info">
+                    <div class="post-title">
+                        <p class="title">Tuyển nhân viên văn phòng</p>
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="post-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos cupiditate dolores tenetur,
+                        voluptatem necessitatibus sunt repellat reprehenderit eum, error quia ducimus. Repellendus
+                        quos
+                        ea, enim assumenda voluptate in cupiditate iste.
+                    </div>
+                    <div class="row-flex">
+                        <div class="item">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            <p>binhhv0712@gmail.com</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <p>Ho Chi Minh</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i>
+                            <p>Banking</p>
+                        </div>
+                    </div>
+                    <div class="row-flex">
+                        <div class="item">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                            <p>Full time</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <p>Manager</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa fa-money" aria-hidden="true"></i>
+                            <p>10000 $</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="avatar">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.STdrVT87X1tnQJWSdE5VeQHaHa&pid=Api&P=0" alt="">
+                </div>
+                <div class="post-info">
+                    <div class="post-title">
+                        <p class="title">Tuyển nhân viên văn phòng</p>
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="post-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos cupiditate dolores tenetur,
+                        voluptatem necessitatibus sunt repellat reprehenderit eum, error quia ducimus. Repellendus
+                        quos
+                        ea, enim assumenda voluptate in cupiditate iste.
+                    </div>
+                    <div class="row-flex">
+                        <div class="item">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            <p>binhhv0712@gmail.com</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <p>Ho Chi Minh</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i>
+                            <p>Banking</p>
+                        </div>
+                    </div>
+                    <div class="row-flex">
+                        <div class="item">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                            <p>Full time</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <p>Manager</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa fa-money" aria-hidden="true"></i>
+                            <p>10000 $</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="avatar">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.STdrVT87X1tnQJWSdE5VeQHaHa&pid=Api&P=0" alt="">
+                </div>
+                <div class="post-info">
+                    <div class="post-title">
+                        <p class="title">Tuyển nhân viên văn phòng</p>
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="post-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos cupiditate dolores tenetur,
+                        voluptatem necessitatibus sunt repellat reprehenderit eum, error quia ducimus. Repellendus
+                        quos
+                        ea, enim assumenda voluptate in cupiditate iste.
+                    </div>
+                    <div class="row-flex">
+                        <div class="item">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            <p>binhhv0712@gmail.com</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <p>Ho Chi Minh</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i>
+                            <p>Banking</p>
+                        </div>
+                    </div>
+                    <div class="row-flex">
+                        <div class="item">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                            <p>Full time</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <p>Manager</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa fa-money" aria-hidden="true"></i>
+                            <p>10000 $</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="paging">
+                <div class="pagging-wrapper">
+                    <div class="page-item">Previous</div>
+                    <div class="page-item">1</div>
+                    <div class="page-item">2</div>
+                    <div class="page-item">3</div>
+                    <div class="page-item">4</div>
+                    <div class="page-item">5</div>
+                    <div class="page-item">Next</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

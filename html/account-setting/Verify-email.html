@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify email</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+
+        }
+
+        .free-space {
+            min-height: 730px;
+            width: 80%;
+            margin-right: 20px;
+            box-sizing: border-box;
+            padding: 0 50px 50px 50px;
+            font-size: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .free-space h1 {
+            text-align: center;
+            color: #103785;
+        }
+
+        .free-space input,
+        .free-space button,
+        .free-space select {
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .free-space .verify-email {
+            padding: 25px;
+            background-color: white;
+            box-shadow: 1px 1px 3px gray;
+            border-radius: 10px;
+        }
+
+        .free-space .verify-email .row {
+            display: flex;
+        }
+
+        .free-space .verify-email .label {
+            font-weight: bold;
+        }
+
+
+        .free-space .verify-email .group-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .free-space .verify-email .code-input {
+            margin-bottom: 20px;
+            width: 75%;
+            display: inline-block;
+        }
+
+        .free-space .verify-email .email-icon {
+            width: 25%;
+            display: inline-block;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .free-space .verify-email .email-icon i {
+            font-size: 2em;
+        }
+
+        .free-space .verify-email .code-input input {
+            width: 100%;
+
+        }
+
+        /*May be global*/
+        div.button {
+            display: flex;
+            align-items: center;
+            background: #f5f5f5;
+            padding: 15px;
+            gap: 10px;
+            font-weight: bold;
+            box-shadow: 1px 1px 3px gray;
+            width: max-content;
+            min-width: 100px;
+            justify-content: center;
+        }
+
+        div.button:hover {
+            cursor: pointer;
+            background-color: coral;
+            color: white;
+        }
+        @media screen and (max-width: 600px) {
+            .free-space{
+                padding: 0 25px 25px 25px;
+                font-size: 16px;
+            }
+            .free-space .verify-email .row .code-input{
+                width: 60%;
+            }
+            .free-space .verify-email .row .email-icon {
+                width: 40%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="free-space">
+        <div class="verify-email">
+            <h1>Verify email</h1>
+
+            <div class="row">
+                <div class="code-input">
+                    <div class="label">Code</div>
+                    <input type="text">
+                </div>
+                <div class="email-icon"> <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <div class="label">Send Code</div>
+                </div>
+            </div>
+            <div class="group-buttons">
+                <div class="button">
+                    <i class="fa fa-check-circle" style="color: green" aria-hidden="true"></i>
+                    Confirm
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
