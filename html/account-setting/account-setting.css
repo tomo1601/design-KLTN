@@ -121,8 +121,8 @@ body {
 div.button {
     display: flex;
     align-items: center;
-    background: #3B6798;
-    color: white;
+    border: 1px solid #0C62AD;
+    color: #0C62AD;
     padding: 0.8em;
     gap: 0.5em;
     font-weight: bold;
@@ -136,29 +136,27 @@ div.button {
 }
 
 div.button:hover {
-    cursor: pointer;
-    background-color: coral;
-    color: white;
-}
-
-div.button img {
-    width: 24px;
+    cursor: pointer ;
+    background-color: coral !important;
+    color: white !important;
+    border: 1px solid coral !important;
 }
 
 div.button.cancel {
-    background-color: #F5F5F5;
-    color: #3B6798;
-}
 
-div.button.cancel:hover,
-div.button.delete:hover {
-    background-color: red;
-    color: white;
+    color: #7E7E7E;
+    border: 1px solid #7E7E7E;
+
 }
 
 div.button.delete {
-    background-color: salmon;
-    color: white;
+    color: red;
+    border: 1px solid red;
+
+}
+
+div.button i {
+    margin-top: 3px;
 }
 
 small {
@@ -436,6 +434,13 @@ Post and user
     justify-content: end;
 }
 
+
+.cover-and-avatar .cover .btn-cover {
+    color: white;
+    background-color: #0C62AD;
+    border-color: #0C62AD;
+}
+
 .cover-and-avatar .avatar-wrapper .uploads .button {
     margin-bottom: 10px;
 }
@@ -550,9 +555,6 @@ Post and user
     justify-content: center !important;
 } */
 
-.button i {
-    color: white;
-}
 
 @media screen and (max-width: 600px) {
     .free-space .content-wrapper .row .code-input {
