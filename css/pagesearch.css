@@ -1,0 +1,69 @@
+.input-search {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid #111;
+  border-radius: 5px;
+  width: 400px;
+}
+.button-search {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid #0c62ad;
+  background-color: #0c62ad;
+  color: #fff;
+  border-radius: 10px;
+}
+.input-filter {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid #111;
+  border-radius: 5px;
+  width: 200px;
+}
+.card-search {
+  width: 1200px;
+}
+.logo-image {
+  width: 100px;
+  height: 100px;
+}
+.company-name {
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 40px;
+}
+.title-information {
+  font-size: 20px;
+  font-weight: 600;
+}
+.recruitment-information {
+  background-color: #8cb5e3;
+  padding: 20px;
+}
+.interested-title {
+  font-size: 20px;
+  font-weight: 400;
+}
+.interested-company-name {
+  font-size: 16px;
+  font-weight: 300;
+}
+.interested-informartion {
+  border: #e3ecfc 2px solid;
+  border-radius: 5px;
+  padding: 20px;
+}
+.image-update-cv {
+  width: 347px;
+}
+.upload-profile {
+  position: absolute;
+  left: 920px;
+  top: 1000px;
+}
