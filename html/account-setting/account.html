@@ -43,6 +43,11 @@
             font-size: 1em;
         }
 
+        .navbar-vertical .label:hover {
+            cursor: pointer;
+            color: coral;
+        }
+
         .navbar-vertical .nav-item {
             margin: 0;
             padding: 0.5em 0;
@@ -76,7 +81,14 @@
         }
 
         .navbar-vertical .nav-icon {
-            width: 1.4em;
+            width: 1em;
+        }
+
+        @media screen and (max-width: 1023px) {
+
+            .navbar-vertical {
+                width: 80%;
+            }
         }
     </style>
 </head>
@@ -110,7 +122,8 @@
                 </li>
             </ul>
 
-            <div class="label" onclick="activeClick(event)"><img src="../../icons/v-shape-black-icon.png" class="nav-icon"> Records
+            <div class="label" onclick="activeClick(event)"><img src="../../icons/v-shape-black-icon.png"
+                    class="nav-icon"> Records
                 management</div>
             <ul class="nav-item">
                 <li onclick="getData('./add-resume.html')">
@@ -127,7 +140,8 @@
                 </li>
 
             </ul>
-            <div class="label" onclick="activeClick(event)"><img src="../../icons/v-shape-black-icon.png" class="nav-icon"> Job
+            <div class="label" onclick="activeClick(event)"><img src="../../icons/v-shape-black-icon.png"
+                    class="nav-icon"> Job
                 management</div>
             <ul class="nav-item">
                 <li onclick="getData('./post-submitted.html')">
@@ -140,7 +154,8 @@
                 </li>
 
             </ul>
-            <div class="label" onclick="activeClick(event)"><img src="../../icons/v-shape-black-icon.png" alt="" class="nav-icon"> Your employers
+            <div class="label" onclick="activeClick(event)"><img src="../../icons/v-shape-black-icon.png" alt=""
+                    class="nav-icon"> Your employers
             </div>
             <ul class="nav-item">
                 <li onclick="getData('./resume-viewer.html')">
@@ -167,7 +182,7 @@
 
             const cur = document.getElementById('free-space')
             cur.innerHTML = `<div class="lds-dual-ring"></div>`
-            await sleep(500)
+            await sleep(200)
             fetch(str)
                 .then(response => response.text())
                 .then(html => {
