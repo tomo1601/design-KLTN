@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Company</title>
+    <link rel="stylesheet" href="./Homepage.css">
+</head>
+
+<body>
+    <div class="topbar-home">
+        <div class="logo-home">
+            <img class="logo-intopbar" src="./img/logo.png" />
+        </div>
+        <div class="menu-homepage">
+            <div class="option-menu">
+                <a class="option-a-menu" href="#">Job</a>
+            </div>
+            <div class="option-menu">
+                <a class="option-a-menu" href="#">Profile & CV</a>
+            </div>
+            <div class="option-menu">
+                <a class="option-a-menu" href="#">Company</a>
+            </div>
+            <div class="option-menu">
+                <a class="option-a-menu" href="#">Tools</a>
+            </div>
+        </div>
+        <div class="mess-bell-homepage">
+            <img class="messbell-intopbar" src="./img/mess-icon.png" />
+        </div>
+        <div class="mess-bell-homepage">
+            <img class="messbell-intopbar" src="./img/bell-grey-icon.png" />
+        </div>
+        <div class="signipup-homepage ">
+            <div class="login-reg-topbar signin-blue">Sign In</div>
+        </div>
+        <div class="signipup-homepage ">
+            <div class="login-reg-topbar signup-white">Sign up</div>
+        </div>
+    </div>
+
+    <!-- <div class="topbar-home">
+        <div class="logo-home">
+            <img class="logo-intopbar" src="./img/logo.png" />
+        </div>
+        <div class="menu-homepage-signed">
+            <div class="option-menu">
+                <a class="option-a-menu" href="#">Job</a>
+            </div>
+            <div class="option-menu">
+                <a class="option-a-menu" href="#">Profile & CV</a>
+            </div>
+            <div class="option-menu">
+                <a class="option-a-menu" href="#">Company</a>
+            </div>
+            <div class="option-menu">
+                <a class="option-a-menu" href="#">Tools</a>
+            </div>
+        </div>
+        <div class="mess-bell-homepage">
+            <img class="messbell-intopbar" src="./img/mess-icon.png" />
+        </div>
+        <div class="mess-bell-homepage">
+            <img class="messbell-intopbar" src="./img/bell-grey-icon.png" />
+        </div>
+        <div class="signed-homepage ">
+            <img class="messbell-intopbar" src="./img/personal.png" />
+        </div>
+    </div> -->
+
+    <div class="banner-top">
+        <img src="./img/banner-home.png" alt="Banner 1">
+        <img src="./img/banner-home-or.png" alt="Banner 2">
+        <img src="./img/banner-home-or2.png" alt="Banner 3">
+
+        <div class="search-bar-home">
+            <div class="mg-input-searchbar keyword-search-inhome">
+                <input class="input-search-homepage" type="text" name="keyword" value=""
+                    placeholder="Enter jobs, skills,..." />
+            </div>
+            <div class="mg-input-searchbar location-search-inhome">
+                <select class="input-search-homepage custom-select" name="location" placeholder="All location">
+                    <option>All location</option>
+                    <option>Ho Chi Minh City</option>
+                    <option>Ha Noi City</option>
+                </select>
+            </div>
+            <div class="btn-search-inhome">
+                <div class="custome-btn-search">
+                    <div class="icon-ssearch">
+                    </div>
+                    <span>Search</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const images = document.querySelectorAll('.banner-top img');
+        let currentIndex = 0;
+
+        function showImage(index) {
+            images[currentIndex].classList.remove('active');
+            currentIndex = index;
+            images[currentIndex].classList.add('active');
+        }
+
+        function nextImage() {
+            let newIndex = currentIndex + 1;
+            if (newIndex >= images.length) {
+                newIndex = 0;
+            }
+            showImage(newIndex);
+        }
+
+        function firstImage() {
+            showImage(currentIndex);
+        }
+
+        firstImage();
+        setInterval(nextImage, 20000);
+    </script>
+
+
+    <div class="hot-job-homepage">
+        <div class="hot-job-homepage-titlebox">
+            <div class="post-bx-title">
+                Hot Jobs
+            </div>
+            <div class="post-bx-viewall">
+                View all >>
+            </div>
+        </div>
+        <div class="list-posts-homepage">
+            <div class="post-item">
+                <div class="logo-emp-post">
+                    <a href="# "><img src="./img/tma-logo.png" class="img-inpost-homepage"></a>
+                </div>
+                <div class="info-post-homepage">
+                    <div class="post-title-homepage">
+                        <a href="# ">TUYỂN THỰC TẬP SINH SINH VIÊN NGÀNH CNTT, ĐTVT</a>
+                    </div>
+                    <div class="type-of-work">
+                        Part time
+                    </div>
+                    <div class="locationg-company-homepage">
+                        Công ty: Công ty TNHH Giải Pháp Phần Mềm Tường Minh - Thành phố Hồ Chí Minh
+                    </div>
+                    <div class="follow-post-heart">
+                        <div class="heart-icon">
+                            <img class="icon-hear-follow" src="./icon/round-heart-icon.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <div class="logo-emp-post">
+                    <a href="# "><img src="./img/tma-logo.png" class="img-inpost-homepage"></a>
+                </div>
+                <div class="info-post-homepage">
+                    <div class="post-title-homepage">
+                        <a href="# ">TUYỂN THỰC TẬP SINH SINH VIÊN NGÀNH CNTT, ĐTVT</a>
+                    </div>
+                    <div class="type-of-work">
+                        Part time
+                    </div>
+                    <div class="locationg-company-homepage">
+                        Công ty: Công ty TNHH Giải Pháp Phần Mềm Tường Minh - Thành phố Hồ Chí Minh
+                    </div>
+                    <div class="follow-post-heart">
+                        <div class="heart-icon">
+                            <img class="icon-hear-follow" src="./icon/heart-icon.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <div class="logo-emp-post">
+                    <a href="# "><img src="./img/tma-logo.png" class="img-inpost-homepage"></a>
+                </div>
+                <div class="info-post-homepage">
+                    <div class="post-title-homepage">
+                        <a href="# ">TUYỂN THỰC TẬP SINH SINH VIÊN NGÀNH CNTT, ĐTVT</a>
+                    </div>
+                    <div class="type-of-work">
+                        Part time
+                    </div>
+                    <div class="locationg-company-homepage">
+                        Công ty: Công ty TNHH Giải Pháp Phần Mềm Tường Minh - Thành phố Hồ Chí Minh
+                    </div>
+                    <div class="follow-post-heart">
+                        <div class="heart-icon">
+                            <img class="icon-hear-follow" src="./icon/round-heart-icon.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <div class="logo-emp-post">
+                    <a href="# "><img src="./img/tma-logo.png" class="img-inpost-homepage"></a>
+                </div>
+                <div class="info-post-homepage">
+                    <div class="post-title-homepage">
+                        <a href="# ">TUYỂN THỰC TẬP SINH SINH VIÊN NGÀNH CNTT, ĐTVT</a>
+                    </div>
+                    <div class="type-of-work">
+                        Part time
+                    </div>
+                    <div class="locationg-company-homepage">
+                        Công ty: Công ty TNHH Giải Pháp Phần Mềm Tường Minh - Thành phố Hồ Chí Minh
+                    </div>
+                    <div class="follow-post-heart">
+                        <div class="heart-icon">
+                            <img class="icon-hear-follow" src="./icon/round-heart-icon.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <div class="logo-emp-post">
+                    <a href="# "><img src="./img/tma-logo.png" class="img-inpost-homepage"></a>
+                </div>
+                <div class="info-post-homepage">
+                    <div class="post-title-homepage">
+                        <a href="# ">TUYỂN THỰC TẬP SINH SINH VIÊN NGÀNH CNTT, ĐTVT</a>
+                    </div>
+                    <div class="type-of-work">
+                        Part time
+                    </div>
+                    <div class="locationg-company-homepage">
+                        Công ty: Công ty TNHH Giải Pháp Phần Mềm Tường Minh - Thành phố Hồ Chí Minh
+                    </div>
+                    <div class="follow-post-heart">
+                        <div class="heart-icon">
+                            <img class="icon-hear-follow" src="./icon/round-heart-icon.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <div class="logo-emp-post">
+                    <a href="# "><img src="./img/tma-logo.png" class="img-inpost-homepage"></a>
+                </div>
+                <div class="info-post-homepage">
+                    <div class="post-title-homepage">
+                        <a href="# ">TUYỂN THỰC TẬP SINH SINH VIÊN NGÀNH CNTT, ĐTVT</a>
+                    </div>
+                    <div class="type-of-work">
+                        Part time
+                    </div>
+                    <div class="locationg-company-homepage">
+                        Công ty: Công ty TNHH Giải Pháp Phần Mềm Tường Minh - Thành phố Hồ Chí Minh
+                    </div>
+                    <div class="follow-post-heart">
+                        <div class="heart-icon">
+                            <img class="icon-hear-follow" src="./icon/round-heart-icon.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="paging-post">
+            <div class="circle-round">
+                <img src="./icon/left-arow-icon.png">
+            </div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #0c62ad; border: 2px solid #0c62ad"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="circle-round">
+                <img src="./icon/right-arow-grey-icon.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="top-emp-homepage">
+        <div class="top-emp-title">
+            Top Employers
+        </div>
+        <div class="list-emp-homepage">
+            <img src="./img/tma-logo.png" class="logo-top-emp">
+            <img src="./img/tma-logo.png" class="logo-top-emp">
+            <img src="./img/tma-logo.png" class="logo-top-emp">
+            <img src="./img/tma-logo.png" class="logo-top-emp">
+            <img src="./img/tma-logo.png" class="logo-top-emp">
+            <img src="./img/tma-logo.png" class="logo-top-emp">
+            <img src="./img/tma-logo.png" class="logo-top-emp">
+            <img src="./img/tma-logo.png" class="logo-top-emp">
+            <img src="./img/tma-logo.png" class="logo-top-emp">
+            <img src="./img/tma-logo.png" class="logo-top-emp">
+        </div>
+    </div>
+
+    <div class="hot-job-homepage">
+        <div class="hot-job-homepage-titlebox">
+            <div class="post-bx-title-ai">
+                Suitable job
+            </div>
+            <div class="round-recommend">
+                Recommended by HBQ AI
+            </div>
+            <div class="post-bx-viewall-ai">
+                View all >>
+            </div>
+        </div>
+        <div class="list-posts-homepage">
+            <div class="post-item">
+                <div class="logo-emp-post">
+                    <a href="# "><img src="./img/tma-logo.png" class="img-inpost-homepage"></a>
+                </div>
+                <div class="info-post-homepage">
+                    <div class="post-title-homepage">
+                        <a href="# ">TUYỂN THỰC TẬP SINH SINH VIÊN NGÀNH CNTT, ĐTVT</a>
+                    </div>
+                    <div class="type-of-work">
+                        Part time
+                    </div>
+                    <div class="locationg-company-homepage">
+                        Công ty: Công ty TNHH Giải Pháp Phần Mềm Tường Minh - Thành phố Hồ Chí Minh
+                    </div>
+                    <div class="follow-post-heart">
+                        <div class="heart-icon">
+                            <img class="icon-hear-follow" src="./icon/round-heart-icon.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <div class="logo-emp-post">
+                    <a href="# "><img src="./img/tma-logo.png" class="img-inpost-homepage"></a>
+                </div>
+                <div class="info-post-homepage">
+                    <div class="post-title-homepage">
+                        <a href="# ">TUYỂN THỰC TẬP SINH SINH VIÊN NGÀNH CNTT, ĐTVT</a>
+                    </div>
+                    <div class="type-of-work">
+                        Part time
+                    </div>
+                    <div class="locationg-company-homepage">
+                        Công ty: Công ty TNHH Giải Pháp Phần Mềm Tường Minh - Thành phố Hồ Chí Minh
+                    </div>
+                    <div class="follow-post-heart">
+                        <div class="heart-icon">
+                            <img class="icon-hear-follow" src="./icon/heart-icon.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <div class="logo-emp-post">
+                    <a href="# "><img src="./img/tma-logo.png" class="img-inpost-homepage"></a>
+                </div>
+                <div class="info-post-homepage">
+                    <div class="post-title-homepage">
+                        <a href="# ">TUYỂN THỰC TẬP SINH SINH VIÊN NGÀNH CNTT, ĐTVT</a>
+                    </div>
+                    <div class="type-of-work">
+                        Part time
+                    </div>
+                    <div class="locationg-company-homepage">
+                        Công ty: Công ty TNHH Giải Pháp Phần Mềm Tường Minh - Thành phố Hồ Chí Minh
+                    </div>
+                    <div class="follow-post-heart">
+                        <div class="heart-icon">
+                            <img class="icon-hear-follow" src="./icon/round-heart-icon.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <div class="logo-emp-post">
+                    <a href="# "><img src="./img/tma-logo.png" class="img-inpost-homepage"></a>
+                </div>
+                <div class="info-post-homepage">
+                    <div class="post-title-homepage">
+                        <a href="# ">TUYỂN THỰC TẬP SINH SINH VIÊN NGÀNH CNTT, ĐTVT</a>
+                    </div>
+                    <div class="type-of-work">
+                        Part time
+                    </div>
+                    <div class="locationg-company-homepage">
+                        Công ty: Công ty TNHH Giải Pháp Phần Mềm Tường Minh - Thành phố Hồ Chí Minh
+                    </div>
+                    <div class="follow-post-heart">
+                        <div class="heart-icon">
+                            <img class="icon-hear-follow" src="./icon/round-heart-icon.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <div class="logo-emp-post">
+                    <a href="# "><img src="./img/tma-logo.png" class="img-inpost-homepage"></a>
+                </div>
+                <div class="info-post-homepage">
+                    <div class="post-title-homepage">
+                        <a href="# ">TUYỂN THỰC TẬP SINH SINH VIÊN NGÀNH CNTT, ĐTVT</a>
+                    </div>
+                    <div class="type-of-work">
+                        Part time
+                    </div>
+                    <div class="locationg-company-homepage">
+                        Công ty: Công ty TNHH Giải Pháp Phần Mềm Tường Minh - Thành phố Hồ Chí Minh
+                    </div>
+                    <div class="follow-post-heart">
+                        <div class="heart-icon">
+                            <img class="icon-hear-follow" src="./icon/round-heart-icon.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <div class="logo-emp-post">
+                    <a href="# "><img src="./img/tma-logo.png" class="img-inpost-homepage"></a>
+                </div>
+                <div class="info-post-homepage">
+                    <div class="post-title-homepage">
+                        <a href="# ">TUYỂN THỰC TẬP SINH SINH VIÊN NGÀNH CNTT, ĐTVT</a>
+                    </div>
+                    <div class="type-of-work">
+                        Part time
+                    </div>
+                    <div class="locationg-company-homepage">
+                        Công ty: Công ty TNHH Giải Pháp Phần Mềm Tường Minh - Thành phố Hồ Chí Minh
+                    </div>
+                    <div class="follow-post-heart">
+                        <div class="heart-icon">
+                            <img class="icon-hear-follow" src="./icon/round-heart-icon.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="paging-post">
+            <div class="circle-round">
+                <img src="./icon/left-arow-icon.png">
+            </div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #0c62ad; border: 2px solid #0c62ad"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="circle-round">
+                <img src="./icon/right-arow-grey-icon.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="hot-job-homepage">
+        <div class="hot-job-homepage-titlebox">
+            <div class="post-bx-title">
+                Attractive job
+            </div>
+            <div class="">
+
+            </div>
+            <div class="post-bx-viewall">
+                View all >>
+            </div>
+        </div>
+        <div class="list-posts-homepage">
+            <div class="post-item">
+                <div class="logo-emp-post">
+                    <a href="# "><img src="./img/tma-logo.png" class="img-inpost-homepage"></a>
+                </div>
+                <div class="info-post-homepage">
+                    <div class="post-title-homepage">
+                        <a href="# ">TUYỂN THỰC TẬP SINH SINH VIÊN NGÀNH CNTT, ĐTVT</a>
+                    </div>
+                    <div class="type-of-work">
+                        Part time
+                    </div>
+                    <div class="locationg-company-homepage">
+                        Công ty: Công ty TNHH Giải Pháp Phần Mềm Tường Minh - Thành phố Hồ Chí Minh
+                    </div>
+                    <div class="follow-post-heart">
+                        <div class="heart-icon">
+                            <img class="icon-hear-follow" src="./icon/round-heart-icon.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <div class="logo-emp-post">
+                    <a href="# "><img src="./img/tma-logo.png" class="img-inpost-homepage"></a>
+                </div>
+                <div class="info-post-homepage">
+                    <div class="post-title-homepage">
+                        <a href="# ">TUYỂN THỰC TẬP SINH SINH VIÊN NGÀNH CNTT, ĐTVT</a>
+                    </div>
+                    <div class="type-of-work">
+                        Part time
+                    </div>
+                    <div class="locationg-company-homepage">
+                        Công ty: Công ty TNHH Giải Pháp Phần Mềm Tường Minh - Thành phố Hồ Chí Minh
+                    </div>
+                    <div class="follow-post-heart">
+                        <div class="heart-icon">
+                            <img class="icon-hear-follow" src="./icon/heart-icon.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <div class="logo-emp-post">
+                    <a href="# "><img src="./img/tma-logo.png" class="img-inpost-homepage"></a>
+                </div>
+                <div class="info-post-homepage">
+                    <div class="post-title-homepage">
+                        <a href="# ">TUYỂN THỰC TẬP SINH SINH VIÊN NGÀNH CNTT, ĐTVT</a>
+                    </div>
+                    <div class="type-of-work">
+                        Part time
+                    </div>
+                    <div class="locationg-company-homepage">
+                        Công ty: Công ty TNHH Giải Pháp Phần Mềm Tường Minh - Thành phố Hồ Chí Minh
+                    </div>
+                    <div class="follow-post-heart">
+                        <div class="heart-icon">
+                            <img class="icon-hear-follow" src="./icon/round-heart-icon.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <div class="logo-emp-post">
+                    <a href="# "><img src="./img/tma-logo.png" class="img-inpost-homepage"></a>
+                </div>
+                <div class="info-post-homepage">
+                    <div class="post-title-homepage">
+                        <a href="# ">TUYỂN THỰC TẬP SINH SINH VIÊN NGÀNH CNTT, ĐTVT</a>
+                    </div>
+                    <div class="type-of-work">
+                        Part time
+                    </div>
+                    <div class="locationg-company-homepage">
+                        Công ty: Công ty TNHH Giải Pháp Phần Mềm Tường Minh - Thành phố Hồ Chí Minh
+                    </div>
+                    <div class="follow-post-heart">
+                        <div class="heart-icon">
+                            <img class="icon-hear-follow" src="./icon/round-heart-icon.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <div class="logo-emp-post">
+                    <a href="# "><img src="./img/tma-logo.png" class="img-inpost-homepage"></a>
+                </div>
+                <div class="info-post-homepage">
+                    <div class="post-title-homepage">
+                        <a href="# ">TUYỂN THỰC TẬP SINH SINH VIÊN NGÀNH CNTT, ĐTVT</a>
+                    </div>
+                    <div class="type-of-work">
+                        Part time
+                    </div>
+                    <div class="locationg-company-homepage">
+                        Công ty: Công ty TNHH Giải Pháp Phần Mềm Tường Minh - Thành phố Hồ Chí Minh
+                    </div>
+                    <div class="follow-post-heart">
+                        <div class="heart-icon">
+                            <img class="icon-hear-follow" src="./icon/round-heart-icon.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-item">
+                <div class="logo-emp-post">
+                    <a href="# "><img src="./img/tma-logo.png" class="img-inpost-homepage"></a>
+                </div>
+                <div class="info-post-homepage">
+                    <div class="post-title-homepage">
+                        <a href="# ">TUYỂN THỰC TẬP SINH SINH VIÊN NGÀNH CNTT, ĐTVT</a>
+                    </div>
+                    <div class="type-of-work">
+                        Part time
+                    </div>
+                    <div class="locationg-company-homepage">
+                        Công ty: Công ty TNHH Giải Pháp Phần Mềm Tường Minh - Thành phố Hồ Chí Minh
+                    </div>
+                    <div class="follow-post-heart">
+                        <div class="heart-icon">
+                            <img class="icon-hear-follow" src="./icon/round-heart-icon.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="paging-post">
+            <div class="circle-round">
+                <img src="./icon/left-arow-icon.png">
+            </div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #0c62ad; border: 2px solid #0c62ad"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="page-num-round" style="background-color: #cfcfcf; border: 2px solid #cfcfcf"></div>
+            <div class="circle-round">
+                <img src="./icon/right-arow-grey-icon.png">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function toTopPage() {
+            document.getElementById("click-to-top").addEventListener("click", function () {
+                window.scrollTo(0, 0);
+            });
+        }
+    </script>
+    <div class="footer-homepage">
+        <div class="onclick-to-top">
+            <img id="click-to-top" class="to-top-icon" src="./icon/to-top-icon.png" onclick={toTopPage()}>
+        </div>
+        <div class="footer-shadow">
+            <div class="info-footer">
+                <div class="footer-leftpart">
+                    <div class="logo-infooter">
+                        <img src="./img/logo.png">
+                    </div>
+                    <div class="name-school">
+                        <div>
+                            <p>Trường Đại Học Sư Phạm Kỹ Thuật</p>
+                            <p>Thành Phố Hồ Chí Minh</p>
+                        </div>
+                        <div class="thoa-thuan">
+                            Thoả thuận người dùng.
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-rightpart">
+                    <div class="contact-title">
+                        Contact us
+                    </div>
+                    <div class="school-adress">
+                        <div class="contact-icon">
+                            <img src="./icon/location-icon.png">
+                        </div>
+                        <div class="contact-text">
+                            <p>Đại Học Sư Phạm Kỹ Thuật TP.HCM</p>
+                            <p>01 Võ Văn Ngân, Linh Chiểu, Thủ Đức, TP. HCM </p>
+                        </div>
+                    </div>
+                    <div class="school-adress">
+                        <div class="contact-icon">
+                            <img src="./icon/share-icon.png">
+                        </div>
+                        <div class="contact-text">
+                            <p><a href="#">Website - Facebook</a></p>
+                        </div>
+                    </div>
+                    <div class="school-adress">
+                        <div class="contact-icon">
+                            <img src="./icon/customer-support-icon.png">
+                        </div>
+                        <div class="contact-text">
+                            <p>19110170@student.hcmute.edu.vn</p>
+                            <p>19110200@student.hcmute.edu.vn</p>
+                            <p>19110271@student.hcmute.edu.vn</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-footer">
+                @ <p id="currentYear"></p> <a class="link-bhq">HBQ Team</a> - Thiết kế & Phát triển bới HBQ Team -
+                HCMUTE
+            </div>
+            <script>
+                var currentYear = new Date().getFullYear();
+                document.getElementById("currentYear").innerHTML = " " + currentYear + " ";
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
